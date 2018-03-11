@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-sm-12">
+        <carousel class="text-center">
+        <slide >
+            <a routerLink="/videos/" routerLinkActive="active">
+                <img class="img-main-carousel" [src]="videoListDefaultImage" width="500" height="400" alt="First slide">
+            </a>
+            <div class="carousel-caption">
+              <h3>Video List</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <p><a class="btn btn-primary" routerLink="/videos/" routerLinkActive="active">View Videos</a></p>
+            </div>
+          </slide>
+        <slide *ngFor = "let imageObj of homeImageList">
+            <a routerLink="/videos/{{ imageObj.slug }}" routerLinkActive="active">
+                <img class="img-main-carousel" [src]="imageObj.image" width="500" height="400" alt="First slide">
+            </a>
+            <div class="carousel-caption">
+              <h3>{{ imageObj.name }}</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <p><a class="btn btn-default" routerLink="/videos/{{ imageObj.slug }}" routerLinkActive="active">View</a></p>
+            </div>
+          </slide>
+<!--           <slide>
+  <a href="/videos/video-1" #imageOne (click)="preventNormal($event,imageOne)">
+      <img class="img-main-carousel" src="assets/images/nature/4.jpg" width="500" height="400" alt="First slide">
+  </a>
+  <div class="carousel-caption">
+    <h3>First slide label</h3>
+    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    <p><a class="btn btn-default" href="/videos/video-1">Video 1</a></p>
+  </div>
+</slide>
+<slide>
+  <a href="/videos/video-1" #imageTwo (click)="preventNormal($event,imageOne)">
+      <img class="img-main-carousel" src="assets/images/nature/5.jpg" width="500" height="400" alt="Second slide">
+  </a>
+  <div class="carousel-caption">
+    <h3>Second slide label</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p><a class="btn btn-default" href="/videos/video-1">Video 1</a></p>
+  </div>
+</slide>
+<slide>
+  <a href="/videos/video-1" #imageThree (click)="preventNormal($event,imageOne)">
+      <img class="img-main-carousel" src="assets/images/nature/6.jpg" width="500" height="400" alt="Third slide">
+  </a>
+  <div class="carousel-caption">
+    <h3>Third slide label</h3>
+    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    <p><a class="btn btn-default" href="/videos/video-1">Video 1</a></p>
+  </div>
+</slide> -->
+        </carousel>
+    </div>
+</div>

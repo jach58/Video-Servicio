@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+.main-container{
+    margin-bottom:20px;
+}
+
+.img-main-carousel{
+    max-height:500px;
+    margin: 0 auto;
+}
+
+.search-inline .navbar-left{
+    float:none !important;
+}
+
+.img-center{
+    margin:0 auto;
+}
+
+.row .last{
+    margin:0;
+}
